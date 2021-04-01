@@ -10,7 +10,7 @@
                <ul>
                    <li>Population: {{planet.population}}</li>
                    <li>Terrain: {{planet.terrain}}</li>
-                   <li>Diameter: {{planet.name}} Km.</li>
+                   <li>Diameter: {{planet.diameter}} Km.</li>
                    <li>Climate: {{planet.climate}}</li>
                    <li>Gravity: {{planet.gravity}}</li>
                    <li>Surface water: {{planet.surface_water}}</li> 

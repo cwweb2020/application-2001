@@ -1,6 +1,6 @@
 <template>
     <section class="footer">
-      <h3 class="fs-3 text-white">STAR WRS</h3>
+      <h3 class="fs-3 text-white">STAR WARS</h3>
     </section>
 </template>
 
