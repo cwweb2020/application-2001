@@ -1,6 +1,6 @@
 <template>
 <div>
-
+<h5 class="py-3 my-3 text-start mx-5 fs-3">Explore ALL Planets..</h5>
    <div class="container __container">
        <div class="card">
            <div class="card-header bg-dark">
