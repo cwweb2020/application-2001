@@ -11,15 +11,15 @@
            <p class="card-text">Some caracteristics from Tatooine planet.</p>
             
              <ul>
-                 <li>Name of the Planet : {{allplanets.results[0].name}}</li>
-                 <li>Rotation Period : {{allplanets.results[0].rotation_period}}</li>
-                 <li>Orbital Period: {{allplanets.results[0].orbital_period}}</li>
-                 <li>Diameter: {{allplanets.results[0].diameter}}</li>
-                 <li> Climate: {{allplanets.results[0].climate}}</li>
-                 <li>Graviti: {{allplanets.results[0].gravity}}</li>
-                 <li>Terrain: {{allplanets.results[0].terrain}}</li>
-                 <li>Surface water: {{allplanets.results[0].surface_water}}</li>
-                 <li> Population: {{allplanets.results[0].population}}</li>
+                 <li>Name of the Planet : {{allplanets.name}}</li>
+                 <li>Rotation Period : {{allplanets.rotation_period}}</li>
+                 <li>Orbital Period: {{allplanets.orbital_period}}</li>
+                 <li>Diameter: {{allplanets.diameter}}</li>
+                 <li> Climate: {{allplanets.climate}}</li>
+                 <li>Graviti: {{allplanets.gravity}}</li>
+                 <li>Terrain: {{allplanets.terrain}}</li>
+                 <li>Surface water: {{allplanets.surface_water}}</li>
+                 <li> Population: {{allplanets.population}}</li>
              </ul>
          </div>
     </div>
@@ -39,9 +39,9 @@ export default {
         onMounted(() => {
           store.dispatch('fetchPlanet')
         })
-
+           // console.log(store.state.planets);
        const allplanets = computed(() => store.state.planets)
-
+        console.log(allplanets);
        return {allplanets}
     }
 

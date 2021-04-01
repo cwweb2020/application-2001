@@ -9,13 +9,13 @@ export default createStore({
     setPlanets(state, payload){
       state.planets=payload
 
-      console.log(state.planets);
+      console.log('este es del mutation' + state.planets);
     }
   },
   actions: {
     fetchPlanet({commit}){
       axios
-      .get('https://swapi.dev/api/planets/')
+      .get('https://swapi.dev/api/planets/1')
       .then(res =>{
          const datos=res.data
            commit('setPlanets',datos)

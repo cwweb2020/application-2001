@@ -4,7 +4,7 @@
    <div class="container __container">
        <div class="card">
            <div class="card-header bg-dark">
-               <h4 class="infototaltitle">{{planet.name}}  <span class="right" @click="changePlanetLess">Prev</span>|<span class="right" @click="changePlanetAdd">Next</span></h4>
+               <h4 class="infototaltitle">{{planet.name}}  <span class="right" @click="changePlanetLess" v-show="id > 1" >Prev</span>|<span class="right" @click="changePlanetAdd">Next</span></h4>
            </div>
            <div class="card-body cuerpo-tarj">
                <ul>
