@@ -25,10 +25,7 @@
     </div>
       </div>
   </div>
- <div class="text-white">
-  {{allplanets.results[0]}}
-
- </div>
+ 
     
 </template>
 
