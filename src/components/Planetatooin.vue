@@ -8,18 +8,18 @@
 
          <div class="card-body py-4">
            <h5 class="card-title">Card title</h5>
-           <p class="card-text">Some caracteristics from Tatooine planet.</p>
+           <p class="card-text fs-4">Some caracteristics from Tatooine planet.</p>
             
              <ul>
-                 <li>Name of the Planet : {{allplanets.name}}</li>
-                 <li>Rotation Period : {{allplanets.rotation_period}}</li>
-                 <li>Orbital Period: {{allplanets.orbital_period}}</li>
-                 <li>Diameter: {{allplanets.diameter}}</li>
-                 <li> Climate: {{allplanets.climate}}</li>
-                 <li>Graviti: {{allplanets.gravity}}</li>
-                 <li>Terrain: {{allplanets.terrain}}</li>
-                 <li>Surface water: {{allplanets.surface_water}}</li>
-                 <li> Population: {{allplanets.population}}</li>
+                 <li class="fs-4">Name of the Planet : <span class="space">/</span> <b> {{allplanets.name}} </b></li>
+                 <li class="fs-4">Rotation Period : {{allplanets.rotation_period}} hours</li>
+                 <li class="fs-4">Orbital Period: {{allplanets.orbital_period}} Earth Hours</li>
+                 <li class="fs-4">Diameter: {{allplanets.diameter}} km</li>
+                 <li class="fs-4"> Climate: {{allplanets.climate}}</li>
+                 <li class="fs-4">Graviti: {{allplanets.gravity}}</li>
+                 <li class="fs-4">Terrain: {{allplanets.terrain}}</li>
+                 <li class="fs-4">Surface water: {{allplanets.surface_water}}</li>
+                 <li class="fs-4"> Population: {{allplanets.population}} habitants.</li>
              </ul>
          </div>
     </div>

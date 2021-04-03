@@ -4,11 +4,11 @@
    <div class="container __container">
        <div class="card">
            <div class="card-header bg-dark">
-               <h4 class="infototaltitle">{{planet.name}}  <span class="right" @click="changePlanetLess" v-show="id > 1" >Prev</span>|<span class="right" @click="changePlanetAdd">Next</span></h4>
+               <h4 class="infototaltitle"><b> {{planet.name}} </b> <span class="right text-primary" @click="changePlanetLess" v-show="id > 1" >Prev</span>|<span class="right text-primary" @click="changePlanetAdd">Next</span></h4>
            </div>
            <div class="card-body cuerpo-tarj">
                <ul>
-                   <li>Population: {{planet.population}}</li>
+                   <li>Population: {{planet.population}} habitants</li>
                    <li>Terrain: {{planet.terrain}}</li>
                    <li>Diameter: {{planet.diameter}} Km.</li>
                    <li>Climate: {{planet.climate}}</li>
@@ -72,7 +72,7 @@ export default ({
         const getResidentsNames = (url) => {
             axios.get(url).
             then(res => {
-               residents_names.value.push(res.data.name)
+               residents_names.value.push(res.data.name +' '+ ' | ' + ' '+ res.data.height + ' cm' + ' | ' + 'Birth year : '+ res.data.birth_year)
             } )
         }   
         onMounted(()=>{
@@ -105,12 +105,15 @@ export default ({
     color: black !important;
 }
 .cuerpo-tarj{
-    background-color: rgb(88, 85, 85) !important;
+    background-color: #4c4a4a !important;
 }
 .right{
     cursor: pointer;
 }
 .__container{
     padding: 0 0 60px 0;
+}
+.cuerpo-tarj > ul > li{
+    font-weight: 600;
 }
 </style>

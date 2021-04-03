@@ -141,8 +141,9 @@ export default ({
                width: 80%;
                margin: 8px auto !important;
                border: none;
-              padding: 4px 0;
-              box-shadow: 1px 1px 6px lightgrey;
+               padding: 5px 0;
+               box-shadow: 1px 1px 6px lightgrey;
+               background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
            }
            
 }
@@ -152,4 +153,20 @@ export default ({
          width: 100%;
 }
 
+
+
+@media (min-width: 790px){
+   
+   .cajabotonesresidents{
+
+       button{
+       font-size: 19px;
+       font-weight: bold;
+   }
+   img{
+       width: 450px !important;
+   }
+   }
+  
+}
 </style>
