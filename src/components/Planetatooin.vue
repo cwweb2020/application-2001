@@ -1,7 +1,7 @@
 <template>
   <div class="container __containerplaneta">
-          <h2>Tatooine Planet</h2>
-     <h3 class="text-white">About the Planet:..</h3>
+          <h2 class="tatooine-title">Tatooine Planet</h2>
+     <h3 class="text-white aboutplanet-title">About the Planet:..</h3>
       <div class="row">
           <div class="card">
              <img src="https://firebasestorage.googleapis.com/v0/b/productos-9a1af.appspot.com/o/sky.jpg?alt=media&token=73259518-a68d-4d3c-b7bf-f3f65a475683" class="card-img-top" alt="planet">
@@ -54,6 +54,18 @@ export default {
     min-height: 80vh;
 }
 
+@media(max-width:540px){
+    .__containerplaneta{
+        padding: 40px 0 !important;
 
+               .aboutplanet-title{
+                   font-size: 18px;
+                   margin: 8px;
+                   padding: 8px;
+               }
+    }
+
+  
+}
 </style>
 

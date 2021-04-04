@@ -1,5 +1,5 @@
 <template>
- <h5 class="my-5 fs-4">See the Residents from Tatooine</h5>
+ <h5 class="my-5 fs-4 seeresident-title">See the Residents from Tatooine</h5>
     <div class="cajabotonesresidents">
         <button @click="sk=!sk">Luke Skywalker</button>
        <div class="my-3" v-show="sk">
@@ -151,6 +151,10 @@ export default ({
         display: flex;
         justify-content: center !important;
          width: 100%;
+           
+             img{
+                 width: 100%;
+             }
 }
 
 
@@ -162,11 +166,15 @@ export default ({
        button{
        font-size: 19px;
        font-weight: bold;
-   }
-   img{
-       width: 450px !important;
-   }
-   }
+    }
   
+  }
+  
+}
+@media(max-width:540px){
+  .seeresident-title{
+      width: 90%;
+      margin-bottom: 18px !important;
+  }
 }
 </style>

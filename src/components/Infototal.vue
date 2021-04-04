@@ -1,6 +1,6 @@
 <template>
 <div>
-<h5 class="py-3 my-3 text-start mx-5 fs-3">Explore ALL Planets..</h5>
+<h5 class="py-3 my-3 text-start mx-5 fs-3 explore-title">Explore ALL Planets..</h5>
    <div class="container __container">
        <div class="card">
            <div class="card-header bg-dark">
@@ -115,5 +115,15 @@ export default ({
 }
 .cuerpo-tarj > ul > li{
     font-weight: 600;
+}
+
+@media(max-width:540px){
+   
+    .explore-title{
+        width: 100%;
+        margin: 0 !important;
+        font-size: 20px !important;
+         text-align: center !important;
+    }
 }
 </style>

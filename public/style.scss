@@ -5,6 +5,9 @@
     margin: 0;
     padding: 0;
   }
+html{
+    overflow-x: hidden;
+}
 
 h2, h5, h4{
     font-family: 'IBM Plex Mono', monospace;
@@ -21,6 +24,7 @@ p{
 }
 body{
     background-color: #272b30;
+    overflow-x: hidden;
   }
 
   .space{
