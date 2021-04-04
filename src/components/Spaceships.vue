@@ -13,6 +13,7 @@
                  <h3 class="text-white fs-5 my-2">Starship Class: {{ship.starship_class}}.</h3>
                  <h3 class="text-white fs-5 my-2">Crew: {{ship.crew}}.</h3>
                  <h3 class="text-white fs-5 my-2">Passengers: {{ship.passengers}}.</h3>
+                  <h3 class="text-white fs-5 my-2">Cargo Capacity: {{ship.cargo_capacity}}.</h3>
 
                    <div class="card-body">
                  
@@ -136,7 +137,6 @@ export default ({
      color: #ffe81f !important;
  }
 </style>
-
 
 
 
