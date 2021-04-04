@@ -1,5 +1,5 @@
 <template>
-    <h2 class="my-4 fs-3">Discover the Spaceships</h2>
+    <h2 class="my-4 fs-3"> The Spaceships</h2>
 
 
   <div class="spaceship-container">
@@ -7,9 +7,10 @@
             <!-- card -->
                <div class="card _cardspaceship">
                    <h4 class="fs-5 mb-3 spaceship-title">Name: {{spaceship.name}}</h4>
-                 <h3 class="text-white fs-5">Model: {{spaceship.model}}</h3>
-                 <h3 class="text-white fs-5">Max Atmosphering Speed: {{spaceship.    max_atmosphering_speed}} km/h.</h3>
-                 <h3 class="text-white fs-5">Starship Class: {{spaceship.starship_class}}.</h3>
+                   <hr class="bg-light">
+                 <h3 class="text-white fs-5 my-2">Model: {{spaceship.model}}</h3>
+                 <h3 class="text-white fs-5 my-2">Max Atmosphering Speed: {{spaceship.    max_atmosphering_speed}} km/h.</h3>
+                 <h3 class="text-white fs-5 my-2">Starship Class: {{spaceship.starship_class}}.</h3>
                    <div class="card-body">
                  
                </div>
@@ -17,7 +18,7 @@
             <!-- card -->
         </div>
   </div>
-   <!-- <h4>{{$store.getters.sp.results}}</h4> -->
+  
 
 </template>
 
@@ -56,8 +57,9 @@ export default {
 
                  ._cardspaceship{
                         background-color: #51565db0;
-                        padding: 20px !important;
+                        padding: 25px !important;
                         height: 100%;
+                        box-shadow: 1px 1px 8px whitesmoke;
 
                                   .card-body{
                                        padding: 0;
