@@ -3,13 +3,15 @@ import axios from 'axios'
 
 export default createStore({
   state: {
-    planets:[]
+    planets:[],
+    spaceships:[]
   },
   mutations: {
     setPlanets(state, payload){
       state.planets=payload
-
-      console.log('este es del mutation' + state.planets);
+    },
+    setSpaceships(state, payload){
+      state.spaceships=payload
     }
   },
   actions: {
@@ -19,11 +21,27 @@ export default createStore({
       .then(res =>{
          const datos=res.data
            commit('setPlanets',datos)
-         console.log(datos);
+        // console.log(datos);
          
           
       })
       .catch(e => console.log(e))
+    },
+    // call to spaceships
+    fetchSpaceships({commit}){
+      axios
+      .get('https://swapi.dev/api/starships/')
+      .then(res=>{
+        console.log(res.data);
+        const content=res.data
+        commit('setSpaceships',content)
+      })
+      .catch(e => console.log(e))
+    }
+  },
+  getters:{
+    sp(state){
+      return state.spaceships
     }
   },
   modules: {

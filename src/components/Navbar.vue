@@ -3,7 +3,7 @@
        <div class="navwrap">
             <ul class="navlista">
                 <li><router-link to="/">Home</router-link><span class="space">/</span> |<span class="space">./.</span></li>
-                <li><router-link to="/about">About</router-link></li>
+                <li><router-link to="/about">Spaceships</router-link></li>
             </ul>
        </div>
    </section>

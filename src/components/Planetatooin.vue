@@ -41,7 +41,7 @@ export default {
         })
            // console.log(store.state.planets);
        const allplanets = computed(() => store.state.planets)
-        console.log(allplanets);
+      //  console.log(allplanets);
        return {allplanets}
     }
 

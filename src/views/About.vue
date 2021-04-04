@@ -1,25 +1,35 @@
 <template>
-<!-- <div class="totalhommy">
-  <router-link to="/" class="text-white fs-3 hommy">Home</router-link>
-</div> -->
-  <Navbar />
-  <div class="about-total">
-    <h1 class="text-center text-white fs-4 mt-5 pt-6">EXPLORE STAR WARS</h1>
-  </div>
 
+    <Navbar />
+      
+   <Spaceships />
+
+   
 </template>
 
 
 <script>
-
+import Spaceships from '../components/Spaceships'
 import Navbar from '../components/Navbar'
 export default ({
   components:{
      Navbar,
-  },
-  setup() {
-    
+     Spaceships,
+     
   }
+  
+    // setup(){
+    //     const store = useStore()
+    //     onMounted(() => {
+    //       store.dispatch('fetchSpaceships')
+    //     })
+    //        // console.log(store.state.planets);
+       
+    //    return {
+         
+    //    }
+    // }
+
 })
 </script>
 
