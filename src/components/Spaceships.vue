@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import {  onMounted, ref } from "vue"
+import {  computed, onMounted, ref } from "vue"
 import axios from 'axios';
 
 export default ({ 
@@ -34,6 +34,7 @@ export default ({
         const ships = ref([])
         const id = ref(1)
         const itemships = ref([])
+        
         
 
         const changeShip = ()=>{
@@ -44,7 +45,7 @@ export default ({
             getData(id.value)
         }
         const changeShipAdd= ()=>{
-           
+           itemships.value=[]
             id.value +=1
             if (id.value > 4 ) {
                id.value = 4 
@@ -52,7 +53,7 @@ export default ({
             getData(id.value)
         }
         const changeShipLess= ()=>{
-          
+          itemships.value=[]
             id.value -=1
             if (id.value == null || id.value == 0) {
                id.value = 1 
@@ -71,18 +72,22 @@ export default ({
             //mapping ships.value
            ships.value.results.map(function (item) { 
              console.log(item.name);
-             itemships.value.push(item) 
+            itemships.value.push(item) 
             })
+            
                       
         })
         }
+        computed( () => {
+            itemships.value.push(item) 
+        })
         
         onMounted(()=>{
             getData(1)   
 
         })
 
-        return{ships, id, changeShipAdd, changeShipLess, changeShip, itemships}         
+        return{ships, id, changeShipAdd, changeShipLess, changeShip, itemships }         
     },
 })
 </script>
