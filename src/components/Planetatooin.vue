@@ -67,5 +67,8 @@ export default {
 
   
 }
+.tatooine-title{
+    color: #ffe81f !important;
+}
 </style>
 

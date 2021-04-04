@@ -42,6 +42,9 @@ export default createStore({
   getters:{
     sp(state){
       return state.spaceships
+    },
+    plan(state){
+      return state.planets
     }
   },
   modules: {

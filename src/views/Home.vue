@@ -7,13 +7,17 @@
     <!-- New components -->
     <Infototal />
 
+     <Films/>
+
     <Residents/>
 
+   
    <Footer/>
 
 </template>
 
 <script>
+import Films from '../components/Films.vue'
 import Footer from '../components/Footer.vue'
 import Hero from '../components/Hero.vue'
 import Infototal from '../components/Infototal.vue'
@@ -30,6 +34,7 @@ export default {
     Infototal,
     Residents,
      Footer,
+    Films,
    
   }
 

@@ -116,7 +116,9 @@ export default ({
 .cuerpo-tarj > ul > li{
     font-weight: 600;
 }
-
+.explore-title{
+    color: #ffe81f !important;
+}
 @media(max-width:540px){
    
     .explore-title{
