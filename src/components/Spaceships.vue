@@ -1,6 +1,6 @@
 <template>
     <h2 class="my-4 fs-3 spaceship-title"> The Spaceships</h2> 
-   <div class="__cajabotones"> <button @click="changeShipLess" v-show="id > 1">Prev</button> | <button @click="changeShipAdd">Next</button> </div>
+   <div class="__cajabotones"> <button @click="changeShipLess" v-show="id > 1">Prev</button> | <button @click="changeShipAdd" v-bind:disabled="disableButton">Next</button> </div>
 
   <div class="spaceship-container">
         <div class="spaceship-row" v-for="(ship, index) in itemships" :key="index">
@@ -22,18 +22,23 @@
         </div>
   </div>
                         
-                     
+    <Footer/>                 
 </template>
 
 <script>
+import Footer from '../components/Footer'
 import {  computed, onMounted, ref } from "vue"
 import axios from 'axios';
 
 export default ({ 
+  components:{
+    Footer,
+  },
     setup() {
         const ships = ref([])
         const id = ref(1)
         const itemships = ref([])
+        const disableButton=ref(null)
         
         
 
@@ -47,8 +52,9 @@ export default ({
         const changeShipAdd= ()=>{
            itemships.value=[]
             id.value +=1
-            if (id.value > 4 ) {
-               id.value = 4 
+            if (id.value >= 4 ) {
+              //  id.value = 4 
+               disableButton.value=true
             }
             getData(id.value)
         }
@@ -58,6 +64,10 @@ export default ({
             if (id.value == null || id.value == 0) {
                id.value = 1 
             }
+            if (id.value < 4) {
+               disableButton.value=null
+            }
+           
             getData(id.value)
         }
 
@@ -71,7 +81,7 @@ export default ({
 
             //mapping ships.value
            ships.value.results.map(function (item) { 
-             console.log(item.name);
+          //   console.log(item.name);
             itemships.value.push(item) 
             })
             
@@ -87,7 +97,7 @@ export default ({
 
         })
 
-        return{ships, id, changeShipAdd, changeShipLess, changeShip, itemships }         
+        return{ships, id, changeShipAdd, changeShipLess, changeShip, itemships, disableButton }         
     },
 })
 </script>
@@ -100,6 +110,7 @@ export default ({
      display: grid;
      grid-template-columns: repeat( auto-fit, minmax(350px, 1fr) ) !important;
      grid-gap: 15px;
+     min-height: 100vh;
 
 
         .spaceship-row{
